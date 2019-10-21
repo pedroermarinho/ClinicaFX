@@ -1,0 +1,33 @@
+name: clinicafx
+version: '0.1.0'
+summary: ClinicaFX
+description: |
+  Programa feito em Java / JavaFX, voltado para area da saúde.
+base: core18
+grade: stable
+confinement: strict
+
+apps:
+  clinicafx:
+    command: java -jar  $SNAP/jar/ClinicaFX.jar
+    environment:
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-amd64
+      PATH: $JAVA_HOME/jre/bin:$PATH
+    plugs:
+      - desktop
+      - wayland
+      - unity7
+
+parts:
+  clinicafx:
+    plugin: gradle
+    source: .
+    build-packages: [openjdk-11-jdk]
+    stage-packages:
+      - sqlite3
+      - libcanberra-gtk-module
+      - openjfx
+
+
+
+     

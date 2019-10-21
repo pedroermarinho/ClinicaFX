@@ -34,12 +34,12 @@ public final class Banco_de_Dados_Cliente {
 //        System.out.println(url);
             try {
                 if (conexao == null) {
-                    System.out.println(obj.getUser());
-                    System.out.println(obj.getPassword());
+//                    System.out.println(obj.getUser());
+//                    System.out.println(obj.getPassword());
                     if (obj.getPrefix().equals("jdbc:sqlite:")) {
 
-                        conexao = DriverManager.getConnection(obj.getPrefix() + obj.getHost());
-                        System.out.println("Sqlite->" + obj.getPrefix() + obj.getHost());
+                        conexao = DriverManager.getConnection(obj.getPrefix() + obj.getDataBase());
+                        System.out.println("Sqlite->" + obj.getPrefix() + obj.getDataBase());
                     } else {
                         conexao = DriverManager.getConnection(url, obj.getUser(), obj.getPassword());
                     }

@@ -16,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
 /**
@@ -53,9 +54,40 @@ public class CadastroBancoDeDadosController implements Initializable {
     private Button btnSalvar;
 
     @FXML
+    private ToggleButton bntOffline;
+
+    @FXML
+    private ToggleButton bntOnline;
+
+    @FXML
     void OnCancelar(ActionEvent event) {
         dialogStage.close();
     }
+
+
+
+    @FXML
+    void OnOffline(ActionEvent event) {
+        DisableBnt(true);
+        boolean value=false;
+        DataBaseField.setDisable(value);
+        btnSalvar.setDisable(value);
+        bntOffline.setSelected(true);
+        bntOnline.setSelected(false);
+        PrefixField.setText("jdbc:sqlite:");
+        PrefixField.setDisable(true);
+
+    }
+
+    @FXML
+    void OnOnline(ActionEvent event) {
+        DisableBnt(false);
+        bntOffline.setSelected(true);
+        bntOnline.setSelected(false);
+        PrefixField.setText("jdbc:mysql:");
+        PrefixField.setDisable(true);
+    }
+
 
     @FXML
     void OnSalvar(ActionEvent event) {
@@ -133,12 +165,22 @@ public class CadastroBancoDeDadosController implements Initializable {
         }
     }
 
+    private void DisableBnt(boolean value){
+        DataBaseField.setDisable(value);
+        HostField.setDisable(value);
+        PasswordField.setDisable(value);
+        PortField.setDisable(value);
+        PrefixField.setDisable(value);
+        UserField.setDisable(value);
+        btnSalvar.setDisable(value);
+    }
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        DisableBnt(true);
     }
 
     public void setMainApp(MainApp mainApp) {
