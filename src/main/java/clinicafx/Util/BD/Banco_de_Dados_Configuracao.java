@@ -23,8 +23,10 @@ public class Banco_de_Dados_Configuracao {
         try {
 //            conexao = DriverManager.getConnection("jdbc:mysql://localhost/clinica", "root", "");
             if (conexao == null) {
-                conexao = DriverManager.getConnection("jdbc:sqlite:Configuracao");
-                System.out.println("conexão realizada");
+                String path=System.getenv().get("SNAP_USER_DATA");
+
+                conexao = DriverManager.getConnection("jdbc:sqlite:"+path+"/Configuracao");
+//                System.out.println("conexão realizada");
 
             }
             return conexao;

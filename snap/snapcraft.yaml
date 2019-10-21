@@ -9,7 +9,7 @@ confinement: strict
 
 apps:
   clinicafx:
-    command: java -jar  $SNAP/jar/ClinicaFX.jar
+    command: java --module-path="$SNAP/libjar" -cp $SNAP/jar/ClinicaFX.jar clinicafx.Launcher
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-amd64
       PATH: $JAVA_HOME/jre/bin:$PATH
@@ -25,9 +25,13 @@ parts:
     build-packages: [openjdk-11-jdk]
     stage-packages:
       - sqlite3
-      - libcanberra-gtk-module
       - openjfx
 
 
+  libjar:
+    plugin: dump
+    source: snap/local
+    stage:
+      - libjar
 
      

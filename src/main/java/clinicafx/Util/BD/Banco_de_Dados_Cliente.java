@@ -37,13 +37,14 @@ public final class Banco_de_Dados_Cliente {
 //                    System.out.println(obj.getUser());
 //                    System.out.println(obj.getPassword());
                     if (obj.getPrefix().equals("jdbc:sqlite:")) {
-
-                        conexao = DriverManager.getConnection(obj.getPrefix() + obj.getDataBase());
-                        System.out.println("Sqlite->" + obj.getPrefix() + obj.getDataBase());
+                        String path=System.getenv().get("SNAP_USER_DATA");
+//                        System.out.println("path->>>>>"+path);
+                        conexao = DriverManager.getConnection(obj.getPrefix()+path+"/"+ obj.getDataBase());
+//                        System.out.println("Sqlite->" + obj.getPrefix() + obj.getDataBase());
                     } else {
                         conexao = DriverManager.getConnection(url, obj.getUser(), obj.getPassword());
                     }
-                    System.out.println("conexão realizada");
+//                    System.out.println("conexão realizada");
                 }
                 return conexao;
             } catch (SQLException ex) {
