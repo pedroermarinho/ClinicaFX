@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="163.0" prefWidth="374.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="clinicafx.MainApp.Controller.SenhaController">
+    <children>
+        <BorderPane layoutY="-24.0" prefHeight="163.0" prefWidth="374.0" stylesheets="@Estilo/DarkTheme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox alignment="CENTER" prefHeight="52.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="lbUsuario" styleClass="label-black" text="Label" />
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <PasswordField fx:id="senha" alignment="CENTER" maxHeight="30.0" maxWidth="200.0" promptText="Senha" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <HBox alignment="CENTER" prefHeight="62.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#ok" text="OK" />
+                    </children>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

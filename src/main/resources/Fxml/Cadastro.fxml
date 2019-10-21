@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicafx.Controller.CadastroController">
+    <children>
+        <BorderPane fx:id="TelaCadastrosBorderPane" prefHeight="200.0" prefWidth="200.0" styleClass="background-black-1d" stylesheets="@../Styles/Styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            </center>
+            <left>
+                <BorderPane fx:id="Border" prefHeight="200.0" prefWidth="200.0" styleClass="background-black" BorderPane.alignment="CENTER">
+                    <center>
+                        <VBox fx:id="menuVBox" alignment="CENTER" prefHeight="550.0" prefWidth="160.0" spacing="5.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="btnBairro" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnBairro" prefHeight="100.0" styleClass="button-azul" text="Bairro" />
+                                <Button fx:id="btnCidade" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnCidade" prefHeight="100.0" styleClass="button-azul" text="Cidade" />
+                                <Button fx:id="btnCliente" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnCliente" prefHeight="100.0" styleClass="button-azul" text="Cliente" />
+                                <Button fx:id="btnClinica" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnClinica" prefHeight="100.0" styleClass="button-azul" text="Clinica" />
+                                <Button fx:id="btnCorpoCliente" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnCorpoCliente" prefHeight="100.0" styleClass="button-azul" text="Corpo Cliente" />
+                                <Button fx:id="btnEndereco" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnEndereco" prefHeight="100.0" styleClass="button-azul" text="Endereço" />
+                                <Button fx:id="btnEnderecoClinica" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnEnderecoClinica" prefHeight="100.0" styleClass="button-azul" text="Endereço Clinica" />
+                                <Button fx:id="btnEstado" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnEstado" prefHeight="100.0" styleClass="button-azul" text="Estado" />
+                                <Button fx:id="btnFicha" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnFicha" prefHeight="100.0" styleClass="button-azul" text="Ficha" />
+                                <Button fx:id="btnPais" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnPais" prefHeight="100.0" styleClass="button-azul" text="País" />
+                                <Button fx:id="btnRua" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnRua" prefHeight="100.0" styleClass="button-azul" text="Rua" />
+                                <Button fx:id="btnSexo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnSexo" prefHeight="100.0" styleClass="button-azul" text="Sexo" />
+                            </children>
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                            <padding>
+                                <Insets bottom="20.0" left="10.0" right="5.0" top="20.0" />
+                            </padding>
+                        </VBox>
+                    </center>
+                    <right>
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="4.5" minWidth="4.5" mnemonicParsing="false" onAction="#On_OFF_ON" prefWidth="4.5" styleClass="button-white" text="Button" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                        </Button>
+                    </right>
+                </BorderPane>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

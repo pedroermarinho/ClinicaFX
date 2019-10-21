@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicafx.Controller.InformacaoController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TableView fx:id="RegistroClientesView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="IDClienteColumn" maxWidth="1200.0" prefWidth="65.0" text="ID" />
+                        <TableColumn fx:id="NomeClienteColumn" prefWidth="5000.0" text="NOME" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </center>
+            <stylesheets>
+                <URL value="@../Styles/Styles.css" />
+                <URL value="@../Styles/DarkTheme.css" />
+            </stylesheets>
+            <right>
+                <TabPane prefHeight="500.0" prefWidth="604.0" styleClass="background-black-1d" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="Basico">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <GridPane hgap="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="180.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="513.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nome:" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="CPF:" GridPane.rowIndex="4" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cartão SUS:" textAlignment="RIGHT" wrapText="true" GridPane.rowIndex="5" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Data de Nascimento:" textAlignment="RIGHT" wrapText="true" GridPane.rowIndex="3" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Sexo:" GridPane.rowIndex="6" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Pai:" GridPane.rowIndex="1" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Mãe:" GridPane.rowIndex="2" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Email:" GridPane.rowIndex="7" />
+                                                <Label fx:id="NomeLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" />
+                                                <Label fx:id="PaiLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="MaeLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="NascimentoLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label fx:id="CPFLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label fx:id="CartaoSUSLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label fx:id="SexoLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Label fx:id="EmailLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Endereço">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <GridPane hgap="10.0" layoutX="88.0" layoutY="133.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="180.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="501.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cidade:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Estado:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Bairro:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="País:" textAlignment="RIGHT" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Rua:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nº da Casa:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                <Label fx:id="PaisLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" />
+                                                <Label fx:id="EstadoLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="CidadeLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label fx:id="BairroLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label fx:id="RuaLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label fx:id="NCasaLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone Fixo:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                <Label fx:id="TelefoneLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Label fx:id="TelefoneFixoLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Ficha">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <center>
+                                                <TableView fx:id="RegistrosFichaView" prefHeight="196.0" prefWidth="667.0" BorderPane.alignment="CENTER">
+                                                    <columns>
+                                                        <TableColumn fx:id="IDFichaColumn" prefWidth="88.0" text="ID" />
+                                                        <TableColumn fx:id="DataFichaColumn" prefWidth="569.0" text="Data" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </center>
+                                            <bottom>
+                                                <Label fx:id="ObservacaoFichaLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="162.0" prefWidth="667.0" styleClass="label-bright" textAlignment="JUSTIFY" wrapText="true" BorderPane.alignment="CENTER" />
+                                            </bottom>
+                                        </BorderPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab disable="true" text="Exames">
+                            <content>
+                                <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="EAS">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="180.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="501.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cidade:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Estado:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Bairro:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="País:" textAlignment="RIGHT" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Rua:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nº da Casa:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone Fixo:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Fezes">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="180.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="501.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cidade:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Estado:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Bairro:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="País:" textAlignment="RIGHT" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Rua:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nº da Casa:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone Fixo:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Helmito">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="180.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="501.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cidade:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Estado:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Bairro:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="País:" textAlignment="RIGHT" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Rua:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nº da Casa:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone Fixo:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Homograma">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="180.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="501.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cidade:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Estado:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Bairro:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="País:" textAlignment="RIGHT" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Rua:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nº da Casa:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone Fixo:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Protozoarios">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="180.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="501.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cidade:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Estado:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Bairro:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="País:" textAlignment="RIGHT" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Rua:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nº da Casa:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone Fixo:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Sedimentoscopia">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <GridPane hgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="180.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.0" minWidth="10.0" prefWidth="501.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Cidade:" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Estado:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Bairro:" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="País:" textAlignment="RIGHT" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Rua:" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Nº da Casa:" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone:" textAlignment="RIGHT" GridPane.rowIndex="6" />
+                                                                <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Telefone Fixo:" textAlignment="RIGHT" GridPane.rowIndex="7" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="label-bright" text="Label" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>

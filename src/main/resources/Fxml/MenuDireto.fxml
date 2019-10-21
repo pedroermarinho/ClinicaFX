@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="201.0" stylesheets="@../Styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicafx.Controller.MenuDiretoController">
+    <children>
+        <VBox prefHeight="485.0" prefWidth="201.0" styleClass="background-black-1d" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label maxWidth="1.7976931348623157E308" minHeight="80.0" prefHeight="80.0" prefWidth="140.0" style="-fx-alignment: center; -fx-font-size: 16; -fx-text-fill: #7387A8; -fx-border-color: #7387A8; -fx-border-width: 0 0 2 0;" text="MENU" />
+                <JFXButton fx:id="btnInicio" maxWidth="1.7976931348623157E308" onAction="#OnInicio" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Inicio" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <!--                  <FontAwesomeIconView fill="#a1aec4" glyphName="DASHBOARD" size="17.0" wrappingWidth="43.0" />-->
+                    </graphic>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="HOME" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnAgenda" layoutX="10.0" layoutY="67.0" maxWidth="1.7976931348623157E308" onAction="#OnAgenda" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Agenda" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <!--<MaterialDesignIconView fill="#a1aec4" glyphName="SHOPPING" size="17.0" wrappingWidth="42.99997329711914" />-->
+                    </graphic>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="CALENDAR_EMPTY" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnUsuarios" layoutX="10.0" layoutY="109.0" maxWidth="1.7976931348623157E308" onAction="#OnUsuarios" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Usuarios" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <!--<FontAwesomeIconView fill="#a1aec4" glyphName="GROUP" size="17.0" wrappingWidth="43.0" />-->
+                    </graphic>
+                    <graphic>
+                        <FontAwesomeIconView />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnCadastros" layoutX="10.0" layoutY="151.0" maxWidth="1.7976931348623157E308" onAction="#OnCadastros" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Cadastros" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <!--<MaterialDesignIconView fill="#a1aec4" glyphName="VIEW_GRID" size="17.0" wrappingWidth="42.99997329711914" />-->
+                    </graphic>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="EDIT_SIGN" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnPerfil" layoutX="10.0" layoutY="193.0" maxWidth="1.7976931348623157E308" onAction="#OnPerfil" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Perfil" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <!--<FontAwesomeIconView fill="#a1aec4" glyphName="USER" size="17.0" wrappingWidth="43.0" />-->
+                    </graphic>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="USER_MD" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnAlertas" layoutX="10.0" layoutY="235.0" maxWidth="1.7976931348623157E308" onAction="#OnAlertas" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Alertas" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <!--<FontAwesomeIconView fill="#a1aec4" glyphName="EXCLAMATION_TRIANGLE" size="17.0" wrappingWidth="43.0" />-->
+                    </graphic>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="INFO_SIGN" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnConfiguracao" maxWidth="1.7976931348623157E308" onAction="#OnConfiguracao" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Configuração" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <!--<FontAwesomeIconView fill="#a1aec4" glyphName="ASTERISK" size="17.0" wrappingWidth="43.0" />-->
+                    </graphic>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="TOOLS" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnSobre" maxWidth="1.7976931348623157E308" onAction="#OnSobre" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Sobre" textFill="WHITE">
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView glyphName="TOOLS" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnFecharMenu" maxWidth="1.7976931348623157E308" onAction="#OnFecharMenu" prefHeight="50.0" prefWidth="139.0" style="-fx-alignment: left;" styleClass="background-black-1d" text="Fechar Menu" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView />
+                    </graphic>
+                </JFXButton>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

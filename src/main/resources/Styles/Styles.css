@@ -1,0 +1,165 @@
+.background-branco{
+    -fx-background-color: #FFFFFF;
+}
+.background-black{
+    -fx-background-color: black;
+}
+.background-black-1d{
+    -fx-background-color: #1d1d1d;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,20%);
+}
+.menu-bar .label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+/*1028x576*/
+.label-black-titulo {
+    -fx-font-size: 42pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+.label-black-cadastro {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+.label-white-titulo {
+    -fx-font-size: 40pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+.button-azul{
+    -fx-padding: 5 22 5 22;
+
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: #2b579a;
+
+    /*-fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;*/
+    -fx-font-size: 10pt;
+    -fx-text-fill: white;
+}
+.button-verde {
+    -fx-padding: 5 22 5 22;
+
+    -fx-border-color: lawngreen;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: #212121;
+
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 12pt;
+    -fx-text-fill: lawngreen;
+}
+.button-red {
+    -fx-padding: 5 22 5 22;
+
+    -fx-border-color: red;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: #212121;
+
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 12pt;
+    -fx-text-fill: red;
+}
+.button-black{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+.button-white{
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: black;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+.button{
+    -fx-background-radius: 0;
+
+}
+.button:hover{
+    -fx-base: black;  
+}
+.combo-box-base{
+    -fx-background-radius: 0;
+
+}
+.combo-box-base:hover{
+    -fx-base: black;  
+}
+.combo-box-popup{
+    -fx-background-radius: 0;
+
+}
+
+.text-field{
+    -fx-background-radius: 0;
+
+}
+.text-field:hover{
+    -fx-base: black;  
+}
+.date-picker{
+    -fx-background-radius: 0;
+}
+.choice-box{
+    -fx-background-radius: 0;
+}
+.date-picker:hover{
+    -fx-base: black;  
+}
+
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane > .scroll-bar {
+    -fx-background-color: black;
+}
+.scroll-pane > .scroll-bar{
+    -fx-boder-color : black;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.list-view{
+    -fx-background-color: #1d1d1d;
+}
+.list-view> .label{
+    -fx-background-color: white;
+}
+.list-view .list-cell:even {
+    -fx-control-inner-background: #1d1d1d;
+    -fx-text-fill: white;
+}
+.list-view .list-cell:odd {
+    -fx-control-inner-background: #1d1d1d;
+    -fx-text-fill: white;
+}

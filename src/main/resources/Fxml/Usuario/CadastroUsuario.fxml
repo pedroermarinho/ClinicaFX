@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="400.0" styleClass="background-black-1d" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicafx.Controller.Usuario.CadastroUsuarioController">
+    <children>
+        <BorderPane prefHeight="500.0" prefWidth="394.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <bottom>
+                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="btnCancelar" maxHeight="35.0" minHeight="30.0" mnemonicParsing="false" onAction="#OnCancelar" prefHeight="35.0" prefWidth="150.0" styleClass="button-red" text="Cancelar" />
+                        <Button fx:id="btnSalvar" maxHeight="35.0" minHeight="30.0" mnemonicParsing="false" onAction="#OnSalvar" prefHeight="35.0" prefWidth="150.0" styleClass="button-verde" text="Salvar" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets top="10.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </bottom>
+            <center>
+                <VBox alignment="CENTER" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="320.0" minWidth="200.0" prefHeight="413.0" prefWidth="250.0" spacing="10.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ToolBar maxWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="228.0">
+                            <items>
+                                <TextField fx:id="PrimeiroNomeField" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="210.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+                            </items>
+                        </ToolBar>
+                        <ToolBar maxWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="228.0">
+                            <items>
+                                <TextField fx:id="SobrenomeField" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="210.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" />
+                            </items>
+                        </ToolBar>
+                        <ToolBar maxWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="228.0">
+                            <items>
+                                <TextField fx:id="usuarioField" alignment="BOTTOM_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="210.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
+                            </items>
+                        </ToolBar>
+                        <ToolBar maxWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="228.0">
+                            <items>
+                                <TextField fx:id="EmailField" alignment="BOTTOM_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="210.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                            </items>
+                        </ToolBar>
+                        <ToolBar maxWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="228.0">
+                            <items>
+                                <PasswordField fx:id="senhaField" prefHeight="32.0" prefWidth="210.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" />
+                            </items>
+                        </ToolBar>
+                        <ToolBar maxWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="228.0">
+                            <items>
+                                <DatePicker fx:id="dpData" maxHeight="32.0" minHeight="32.0" prefHeight="32.0" prefWidth="210.0" styleClass="date-picker-popup" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data" />
+                            </items>
+                        </ToolBar>
+                        <ToolBar maxWidth="330.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="228.0">
+                            <items>
+                                <ComboBox fx:id="SexoBox" onMouseClicked="#sexo" prefHeight="32.0" prefWidth="210.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo" />
+                            </items>
+                        </ToolBar>
+                    </children>
+                </VBox>
+            </center>
+            <padding>
+                <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@../../Styles/Styles.css" />
+        <URL value="@../../Styles/DarkTheme.css" />
+    </stylesheets>
+</AnchorPane>

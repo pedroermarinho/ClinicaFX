@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="85.0" prefWidth="424.0" styleClass="background2" stylesheets="@Estilo/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicafx.Controller.Util.ErroController">
+    <children>
+        <Label fx:id="lbErro" contentDisplay="CENTER" layoutX="129.0" layoutY="19.0" prefHeight="78.0" prefWidth="280.0" styleClass="label-black" text="h" textAlignment="CENTER" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+        <ImageView fitHeight="84.0" fitWidth="78.0" layoutX="29.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <image>
+                <Image url="@../../_icons/erro.png" />
+            </image>
+        </ImageView>
+        <HBox alignment="CENTER" layoutX="2.0" layoutY="118.0" prefHeight="51.0" prefWidth="424.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#ok" prefWidth="120.0" text="ok" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
