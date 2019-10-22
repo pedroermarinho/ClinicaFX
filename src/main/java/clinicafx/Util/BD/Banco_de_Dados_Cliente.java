@@ -40,7 +40,7 @@ public final class Banco_de_Dados_Cliente {
                         String path=System.getenv().get("SNAP_USER_DATA");
 //                        System.out.println("path->>>>>"+path);
                         conexao = DriverManager.getConnection(obj.getPrefix()+path+"/"+ obj.getDataBase());
-//                        System.out.println("Sqlite->" + obj.getPrefix() + obj.getDataBase());
+                        System.out.println("Sqlite->" + obj.getPrefix()+path+"/"+ obj.getDataBase());
                     } else {
                         conexao = DriverManager.getConnection(url, obj.getUser(), obj.getPassword());
                     }

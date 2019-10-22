@@ -26,6 +26,7 @@ public class Banco_de_Dados_Configuracao {
                 String path=System.getenv().get("SNAP_USER_DATA");
 
                 conexao = DriverManager.getConnection("jdbc:sqlite:"+path+"/Configuracao");
+                System.out.println("jdbc:sqlite:"+path+"/Configuracao");
 //                System.out.println("conexão realizada");
 
             }
