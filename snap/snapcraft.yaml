@@ -9,7 +9,7 @@ confinement: strict
 
 apps:
   clinicafx:
-    command: java --module-path="$SNAP/libjar" -cp $SNAP/jar/ClinicaFX.jar clinicafx.Launcher
+    command: java --module-path="$SNAP/libjar" -cp $SNAP/jar/build.jar clinicafx.Launcher
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-amd64
       PATH: $JAVA_HOME/jre/bin:$PATH
