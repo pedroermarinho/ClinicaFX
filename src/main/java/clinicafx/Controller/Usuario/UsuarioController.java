@@ -64,13 +64,13 @@ public class UsuarioController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try {
-            img = new Image("http://fxexperience.com/wp-content/uploads/2012/03/FxExperienceToolsIcon-256.png");
-            pattern = new ImagePattern(img);
-            avatarCircle.setFill(pattern);
-        } catch (Exception e) {
-
-        }
+//        try {
+//            img = new Image("http://fxexperience.com/wp-content/uploads/2012/03/FxExperienceToolsIcon-256.png");
+//            pattern = new ImagePattern(img);
+//            avatarCircle.setFill(pattern);
+//        } catch (Exception e) {
+//
+//        }
     }
 
     public model_usuario usuario() {
