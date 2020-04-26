@@ -1,0 +1,36 @@
+{
+  "project_name": "ClinicaFX",
+  "version": "0.1.0",
+  "description": "clinicafx",
+  "icon_src": "clinicafx.png",
+  "snap_store_name": "clinicafx",
+  "screenshot_src": ["clinicafx-home.jpeg"],
+  "author": "Pedro Marinho",
+  "github_username": "pedroermarinho",
+  "author_linkedin_username": "pedroermarinho",
+  "author_twitter_username": "pedroermarinho",
+  "author_website": "https://pedroermarinho.github.io/",
+  "homepage": "https://github.com/pedroermarinho/ClinicaFX#readme",
+  "project_demo_url": "https://github.com/pedroermarinho/ClinicaFX#readme",
+  "repository_url": "https://github.com/pedroermarinho/ClinicaFX",
+  "contributing_url": "https://github.com/pedroermarinho/ClinicaFX/blob/master/CONTRIBUTING.md",
+  "documentation_url": "https://github.com/pedroermarinho/ClinicaFX#readme",
+  "license_url": "https://github.com/pedroermarinho/ClinicaFX/blob/master/LICENSE",
+  "issues_url": "https://github.com/pedroermarinho/ClinicaFX/issues",
+  "license": "MIT",
+  "install_command": ["sudo snap install clinicafx"],
+  "usage_command": ["clinicafx"],
+  "test_command": null,
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pedroermarinho/ClinicaFX.git"
+  },
+  "keywords": [
+    
+  ],
+
+  "is_github_repos": true,
+  "has_start_command": true,
+  "has_test_command": false
+}
